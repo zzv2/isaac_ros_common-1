@@ -178,7 +178,7 @@ fi
 print_info "Running $CONTAINER_NAME"
 docker run -it --rm \
     --privileged \
-    --network host \
+    --network "miso-docker_default" \
     ${DOCKER_ARGS[@]} \
     -v $ISAAC_ROS_DEV_DIR:/workspaces/isaac_ros-dev \
     -v /dev/*:/dev/* \
